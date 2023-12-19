@@ -1,0 +1,14 @@
+body {
+  background-image: url(../img/baggrund.webp);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: azure;
+}
+
+a {
+  color: azure;
+}

@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  margin-top: 51.5%;
+  position: fixed;
+}
+
+h2 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Header layout*/
+nav {
+  list-style: none;
+  padding: 0.5%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  text-align: center;
+}
+
+li {
+  margin: 0;
+}
+
+li a {
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin-right: 770px;
+}
+#ommig_side {
+  margin-left: -3%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0;
+}
+
+.img_kolonne {
+  margin-top: 140%;
+  margin-left: 90%;
+}

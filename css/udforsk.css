@@ -1,0 +1,25 @@
+body {
+  color: azure;
+  background-image: url(../img/baggrund_hvid.webp);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: black;
+}
+h2 {
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+h2 {
+  display: none;
+}
+
+.overskrifter {
+  position: fixed;
+  margin-top: 20%;
+}
