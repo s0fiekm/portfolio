@@ -2,9 +2,14 @@ body {
   background-image: url(../img/baggrund.webp);
   background-repeat: no-repeat;
   background-color: black;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+}
+
+h1 {
+  color: azure;
+}
+
+a {
+  color: azure;
 }
 
 p {
@@ -13,20 +18,50 @@ p {
   font-style: normal;
   color: azure;
   font-size: 14px;
+  text-align: justify;
 }
+
 h2 {
   color: azure;
 }
+
 .grid_1_4 {
   display: grid;
   grid-template-columns: 1fr 4fr;
   margin-top: 80%;
   margin-left: 1%;
 }
-.img_kolonne {
-  margin-left: 27%;
+
+video {
+  margin-top: 1%;
+  margin-left: 40%;
 }
 
+#img_container {
+  margin-left: 40%;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/layout_computer_1.webp);
+  width: 60%;
+  height: 60vh;
+  transition: 4s;
+  background-size: cover;
+  background-position: center;
+  animation-name: animate;
+  animation-play-state: running;
+  animation-duration: 25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+#mobilsite {
+  width: 50%;
+  grid-column: span 2;
+}
+
+#studiestartsprøven {
+  margin-top: 150%;
+}
 @keyframes animate {
   0% {
     background-image: url(../img/layout_comutere_2.webp);
@@ -44,20 +79,4 @@ h2 {
   100% {
     background-image: url(../img/layout_computer_1.webp);
   }
-}
-#img_container {
-  margin-top: 0;
-  margin-left: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-image: url(../img/layout_computer_1.webp);
-  width: 100%;
-  transition: 4s;
-  background-size: contain;
-  background-position: center;
-  animation-name: animate;
-  animation-play-state: running;
-  animation-duration: 25s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
 }
