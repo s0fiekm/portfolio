@@ -50,14 +50,3 @@ ul {
   padding: 0;
   margin-top: 0;
 }
-
-.grid_1_1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 0;
-}
-
-.img_kolonne {
-  margin-top: 140%;
-  margin-left: 90%;
-}

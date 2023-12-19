@@ -23,3 +23,14 @@ h2 {
   position: fixed;
   margin-top: 20%;
 }
+
+.img_kolonne {
+  margin-top: 140%;
+  margin-left: 90%;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0;
+}
