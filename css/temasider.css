@@ -1,82 +1,153 @@
 body {
-  background-image: url(../img/baggrund.webp);
-  background-repeat: no-repeat;
   background-color: black;
+  margin: 0;
+  padding: 0;
 }
 
+h2,
 h1 {
   color: azure;
 }
-
-a {
-  color: azure;
-}
-
 p {
-  font-family: "noto-sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: azure;
-  font-size: 14px;
-  text-align: justify;
+  color: aliceblue;
 }
 
-h2 {
-  color: azure;
+#moodboard {
+  z-index: 10;
+  margin-bottom: -14%;
+  margin-top: -15.5%;
 }
-
-.grid_1_4 {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  margin-top: 80%;
-  margin-left: 1%;
-}
-
-video {
-  margin-top: 1%;
-  margin-left: 40%;
-}
-
-#img_container {
-  margin-left: 40%;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-image: url(../img/layout_computer_1.webp);
-  width: 60%;
-  height: 60vh;
-  transition: 4s;
-  background-size: cover;
-  background-position: center;
-  animation-name: animate;
-  animation-play-state: running;
-  animation-duration: 25s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-
-#mobilsite {
-  width: 50%;
-  grid-column: span 2;
-}
-
-#studiestartsprøven {
-  margin-top: 150%;
-}
-@keyframes animate {
-  0% {
-    background-image: url(../img/layout_comutere_2.webp);
-  }
-  40% {
-    background-image: url(../img/layout_computere_3.webp);
-  }
-  60% {
-    background-image: url(../img/layout_computere_4.webp);
-  }
-  80% {
-    background-image: url(../img/layout_computere5.webp);
+@media screen and (min-width: 700px) {
+  .grid_1_1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 5%;
+    padding-top: 10%;
+    overflow: hidden;
   }
 
-  100% {
-    background-image: url(../img/layout_computer_1.webp);
+  .videolink {
+    position: absolute;
+    background-color: #ffff;
+    padding-left: 0.5%;
+    padding-right: 4.84%;
+    text-decoration: none;
+    font-family: "neue-haas-unica", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    transform: rotate(-90deg);
+    margin-top: 21.7%;
+    margin-left: 41.1%;
+  }
+
+  .hjemmesidelink {
+    position: absolute;
+    background-color: #ffff;
+    padding-left: 0.5%;
+    padding-right: 4.84%;
+    text-decoration: none;
+    font-family: "neue-haas-unica", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+    transform: rotate(-90deg);
+    margin-top: 21.7%;
+    margin-left: 41.1%;
+  }
+
+  .hjemmesidelink:hover {
+    color: #0000ff;
+  }
+
+  .videolink:hover {
+    color: #67db47;
+  }
+
+  .overskrifter {
+    padding: 0;
+    grid-column: 1;
+    margin-left: 8px;
+  }
+
+  video {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .kolonne_container {
+    display: flex;
+    flex-direction: column;
+    grid-column: 3;
+    margin-top: 7px;
+  }
+  img {
+    max-width: 100%;
+  }
+  /*billede karussel/slideshow*/
+
+  .slideshow_container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    aspect-ratio: 16/9;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .slideshow_nav {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slideshow_nav a {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background-color: #bbbcb8;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid_1_1_1_1 {
+    padding: 60px;
+  }
+
+  p {
+    font-size: 12px;
+    color: azure;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  video {
+    width: 100%;
+  }
+  .menu-icon {
+    color: #ffff;
   }
 }

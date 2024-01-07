@@ -1,14 +1,26 @@
 body {
-  background-image: url(../img/baggrund.webp);
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 h1 {
   color: azure;
 }
 
-a {
-  color: azure;
+@media screen and (min-width: 599px) {
+  .background_img {
+    background-image: url(../img/baggrund.webp);
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 599px) {
+  .menu-icon {
+    color: #0000;
+  }
+  .background_img {
+    background-image: url(../img/baggrund_mobil.webp);
+    background-color: black;
+    max-width: 100%;
+  }
 }
