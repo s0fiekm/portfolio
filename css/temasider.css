@@ -131,6 +131,10 @@ p {
     padding: 60px;
   }
 
+  .hjemmesidelink {
+    display: none;
+  }
+
   p {
     font-size: 12px;
     color: azure;
@@ -148,6 +152,10 @@ p {
     width: 100%;
   }
   .menu-icon {
+    color: #ffff;
+  }
+
+  a {
     color: #ffff;
   }
 }

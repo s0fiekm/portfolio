@@ -106,7 +106,7 @@ a {
 
 @media screen and (max-width: 599px) {
   .kimhyeree {
-    margin-top: 840px;
+    margin-top: 162%;
     font-size: 40px;
     position: fixed;
   }
@@ -117,18 +117,22 @@ a {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 50px;
     left: 0;
-    right: 0;
+    margin-top: -4%;
+    padding-left: 4%;
     z-index: 100;
-    background-color: azure;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 
   .menu-icon {
-    display: block;
-    margin-left: 89%;
-    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
     cursor: pointer;
+    padding-top: 2%;
   }
 
   ul.show {
@@ -137,8 +141,8 @@ a {
 
   ul li {
     margin: 0;
-    text-align: center;
-    padding: 10px 0;
+    text-align: left;
+    padding-bottom: 2px;
   }
 
   input[type="checkbox"] {

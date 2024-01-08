@@ -35,11 +35,6 @@ h1 {
   margin-left: 23%;
   margin-top: -4%;
 }
-/*
-p {
-  text-align: justify;
-}
-*/
 
 h2 {
   display: grid;
@@ -51,7 +46,7 @@ h3 {
   font-style: normal;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -77,10 +72,15 @@ h3 {
 }
 
 @media screen and (max-width: 650px) {
-  .menu-icon {
-    color: #0000;
+  .kimhyeree {
+    color: black;
   }
-
+  .menu-icon {
+    color: black;
+  }
+  a {
+    color: black;
+  }
   .grid_1_1_1_1 {
     padding: 70px;
   }
@@ -93,7 +93,7 @@ h3 {
   }
 
   p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   h2 {
