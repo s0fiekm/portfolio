@@ -8,6 +8,10 @@ h2,
 h1 {
   color: azure;
 }
+
+h2 {
+  margin-top: 0;
+}
 p {
   color: aliceblue;
 }
@@ -21,16 +25,20 @@ p {
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    column-gap: 5%;
     padding-top: 10%;
     overflow: hidden;
+  }
+
+  .høj_billede {
+    max-width: 50%;
+    margin-left: 50%;
   }
 
   .videolink {
     position: absolute;
     background-color: #ffff;
     padding-left: 0.5%;
-    padding-right: 4.84%;
+    padding-right: 13.4%;
     text-decoration: none;
     font-family: "neue-haas-unica", sans-serif;
     font-weight: 600;
@@ -38,15 +46,15 @@ p {
     font-size: 30px;
     letter-spacing: 0.2rem;
     transform: rotate(-90deg);
-    margin-top: 21.7%;
-    margin-left: 41.1%;
+    margin-top: 24.3%;
+    margin-left: 33.1%;
   }
 
   .hjemmesidelink {
     position: absolute;
     background-color: #ffff;
     padding-left: 0.5%;
-    padding-right: 4.84%;
+    padding-right: 7.6%;
     text-decoration: none;
     font-family: "neue-haas-unica", sans-serif;
     font-weight: 600;
@@ -54,8 +62,14 @@ p {
     font-size: 30px;
     letter-spacing: 0.2rem;
     transform: rotate(-90deg);
-    margin-top: 21.7%;
-    margin-left: 41.1%;
+    margin-top: 22.77%;
+    margin-left: 34.7%;
+  }
+
+  #fuglereden_link {
+    padding-right: 10.9%;
+    margin-top: 56%;
+    margin-left: 33.1%;
   }
 
   .hjemmesidelink:hover {
@@ -63,11 +77,11 @@ p {
   }
 
   .videolink:hover {
-    color: #67db47;
+    color: #0000ff;
   }
 
   .overskrifter {
-    padding: 0;
+    padding-right: 10%;
     grid-column: 1;
     margin-left: 8px;
   }
@@ -80,8 +94,8 @@ p {
   .kolonne_container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 7px;
     grid-column: 3;
-    margin-top: 7px;
   }
   img {
     max-width: 100%;
@@ -129,10 +143,6 @@ p {
 @media screen and (max-width: 650px) {
   .grid_1_1_1_1 {
     padding: 60px;
-  }
-
-  .hjemmesidelink {
-    display: none;
   }
 
   p {
