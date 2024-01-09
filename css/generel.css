@@ -42,7 +42,7 @@ a {
     position: fixed;
     font-size: 55px;
     z-index: 10;
-    margin-top: 840px;
+    margin-top: 50%;
   }
   /*Header layout*/
   nav {
@@ -96,7 +96,7 @@ a {
   }
 
   /* Burger menu */
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     input[type="checkbox"] {
       display: none;
     }
@@ -125,9 +125,9 @@ a {
 
 @media screen and (max-width: 599px) {
   .kimhyeree {
-    margin-top: 162%;
     font-size: 40px;
     position: fixed;
+    margin-top: 50%;
   }
 
   /*Nav forsvind, burgermenu*/
