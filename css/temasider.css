@@ -21,7 +21,7 @@ p {
   margin-bottom: -14%;
   margin-top: -15.5%;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
@@ -46,30 +46,30 @@ p {
     font-size: 30px;
     letter-spacing: 0.2rem;
     transform: rotate(-90deg);
-    margin-top: 24.3%;
-    margin-left: 33.1%;
+    margin-top: -2.6%;
+    margin-left: 18.8%;
+    transform-origin: right bottom; /* rotere om bunden af linket */
   }
 
   .hjemmesidelink {
     position: absolute;
     background-color: #ffff;
-    padding-left: 0.5%;
-    padding-right: 7.6%;
+    padding-right: 7.5%;
     text-decoration: none;
     font-family: "neue-haas-unica", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 30px;
-    letter-spacing: 0.2rem;
+    font-size: 2vw; /* vw i stedet for faste pixels */
+    letter-spacing: 0.1rem;
     transform: rotate(-90deg);
-    margin-top: 22.77%;
-    margin-left: 34.7%;
+    margin-top: -3%;
+    margin-left: 22%;
+    transform-origin: right bottom; /* rotere om bunden af linket */
+    z-index: 100;
   }
 
   #fuglereden_link {
-    padding-right: 10.9%;
-    margin-top: 56.1%;
-    margin-left: 33.1%;
+    margin-top: 60.6%;
   }
 
   .hjemmesidelink:hover {
@@ -98,7 +98,7 @@ p {
     grid-column: 3;
   }
   img {
-    max-width: 100%;
+    width: 100%;
   }
   /*billede karussel/slideshow*/
 
@@ -140,7 +140,7 @@ p {
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .grid_1_1_1_1 {
     padding: 60px;
   }
