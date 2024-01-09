@@ -32,6 +32,9 @@ h2 {
 
 a {
   color: black;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 @media screen and (min-width: 600px) {
@@ -101,6 +104,22 @@ a {
     #hjemknap {
       display: none;
     }
+  }
+
+  /*Undersider til udforsk*/
+
+  li:hover .temasider {
+    display: block;
+  }
+
+  .temasider {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .temasider li {
+    display: block;
   }
 }
 

@@ -68,7 +68,7 @@ p {
 
   #fuglereden_link {
     padding-right: 10.9%;
-    margin-top: 56%;
+    margin-top: 56.1%;
     margin-left: 33.1%;
   }
 
@@ -143,6 +143,16 @@ p {
 @media screen and (max-width: 650px) {
   .grid_1_1_1_1 {
     padding: 60px;
+  }
+  main {
+    margin-top: 10%;
+  }
+
+  .hjemmesidelink {
+    position: absolute;
+    margin-left: 12%;
+    margin-top: 5%;
+    background-color: blue;
   }
 
   p {

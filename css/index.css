@@ -16,7 +16,11 @@ h1 {
 }
 @media screen and (max-width: 600px) {
   .menu-icon {
-    color: #0000;
+    color: black;
+  }
+
+  li a {
+    color: black;
   }
   .background_img {
     background-image: url(../img/baggrund_mobil.webp);
