@@ -1,0 +1,54 @@
+<section class="section section-7 border-bottom">
+  <div class="clf-title border-left">
+    <h4>Copenhagen <br />Light Festival</h4>
+  </div>
+  <div class="centered clf1">
+    <img src="img/clf1.png" alt="" />
+  </div>
+  <div class="centered border-bottom border-left">
+    <img class="background" src="img/clf2.png" alt="" />
+    <img class="foreground" src="img/clf3.png" alt="" />
+  </div>
+</section>
+
+<style>
+  .section-7 {
+    display: grid;
+    grid-template-columns: 730px 1fr;
+    grid-template-rows: auto;
+  }
+
+  .clf-title {
+    grid-column: 2/-1;
+    grid-row: 2;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .clf1 {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+  .clf1 img {
+    width: 50%;
+  }
+
+  .clf2 {
+    grid-column: 2/2;
+    grid-row: 1;
+  }
+  .background {
+    width: 30%;
+  }
+
+  .foreground {
+    width: 15%;
+    z-index: 1;
+    margin-left: -50px;
+  }
+  .background,
+  .foreground {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+</style>
