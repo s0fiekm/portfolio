@@ -1,0 +1,64 @@
+---
+import FirstSection from "../components/FirstSection.astro";
+import SecondSection from "../components/SecondSection.astro";
+import ThirdSection from "../components/ThirdSection.astro";
+import ForthSection from "../components/ForthSection.astro";
+import FifthSection from "../components/FifthSection.astro";
+import SixthSection from "../components/SixthSection.astro";
+import SeventhSection from "../components/SeventhSection.astro";
+import EighthSection from "../components/EighthSection.astro";
+import "../css/mainlayout.css";
+import NinthSection from "../components/NinthSection.astro";
+import VideoContainer from "../components/VideoContainer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <header>
+      <h3 class="kim-hye-ri"><a href="#nav">김혜리</a></h3>
+    </header>
+    <FirstSection />
+    <SecondSection />
+    <ThirdSection />
+    <ForthSection />
+    <FifthSection />
+    <VideoContainer />
+    <SixthSection />
+    <SeventhSection />
+    <EighthSection />
+    <NinthSection />
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+
+    const options = {
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>

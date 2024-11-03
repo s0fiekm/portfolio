@@ -1,0 +1,51 @@
+<section class="section section-0 border-bottom">
+  <div class="passion">
+    <h4>Passion <br /> video</h4>
+  </div>
+  <div class="video border-left">
+    <iframe
+      class="video"
+      title="vimeo-player"
+      src="https://player.vimeo.com/video/1025704634?h=ffb0438ba2"
+      width="640"
+      height="360"
+      frameborder="0"
+      allowfullscreen></iframe>
+  </div>
+</section>
+<style>
+  .section-0 {
+    display: grid;
+    grid-template-columns: 730px 1fr;
+    grid-template-rows: auto;
+  }
+
+  .video {
+    padding: 1rem;
+    grid-column: 2/-1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .passion {
+    display: flex;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+
+  @media (max-width: 1200px) {
+    .section-0 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

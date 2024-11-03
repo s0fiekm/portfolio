@@ -1,0 +1,63 @@
+<section class="section section-2">
+  <div class="fadeInUp-animation sky-3 centered border-bottom border-right">
+    <img src="img/sky-3.svg" alt="" />
+  </div>
+  <div class="fadeInUp-animation quote border-left border-bottom border-top">
+    <q
+      >Det motiverer mig at arbejde med mennesker og værdsætter den
+      <span class="highlight">mangfoldighed</span>, der findes i vores samfund.
+      Derfor er det vigtigt for mig at indgå i sociale
+      <span class="highlight">fællesskaber</span>, hvor jeg gennem mit grafiske
+      arbejde kan være med til at skabe
+      <span class="highlight">synlighed</span>, engagement og sociale
+      forandringer.</q
+    >
+  </div>
+  <div class="sky-4 fadeInUp-animation centered border-right border-top">
+    <img src="img/sky-4.svg" alt="" />
+  </div>
+</section>
+
+<style>
+  q {
+    padding: 2rem;
+    font-family: var(--font-family-primary);
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 2/2;
+  }
+  img {
+    object-fit: contain;
+    width: 50%;
+  }
+  .section-2 {
+    border-bottom: 0.5px solid black;
+    display: grid;
+    grid-template-columns: 730px 1fr;
+    grid-template-rows: auto;
+  }
+
+  .sky-3 {
+    grid-column: 1/1;
+    grid-row: 1;
+  }
+
+  .sky-4 {
+    grid-column: 1/1;
+    grid-row: 3;
+  }
+
+  @media (max-width: 1200px) {
+    .section-2 {
+      border-bottom: 0.5px solid black;
+      display: block;
+    }
+  }
+</style>

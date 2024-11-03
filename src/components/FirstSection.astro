@@ -1,0 +1,90 @@
+<section id="nav" class="section-1 section">
+  <div class="border-right text-box">
+    <h1>Portfolio</h1>
+    <h2>Sofie Kjær - Madsen</h2>
+    <p class="presentation-text">
+      Multimediedesignstuderende med en passion for kreativt design og visuelle
+      løsninger. Det motiverer mig at arbejde med mennesker og værdsætter den
+      mangfoldighed, der findes i vores samfund. Derfor er det vigtigt for mig
+      at ingå i sociale fællesskaber, hvor jeg gennem mit grafiske arbejde kan
+      være med til at skabe synlighed, engagement og sociale forandringer.
+    </p>
+  </div>
+  <div class="portrait border-bottom border-right">
+    <img src="img/sofie1.png" alt="" />
+  </div>
+  <ul class="navigation">
+    <li><a href="#section-3">Personlige projekter</a></li>
+    <li><a href="#section-5">Tidligere projekter</a></li>
+    <li><a href="#section-8">Færdigheder</a></li>
+    <li><a href="/">Kontakt</a></li>
+  </ul>
+</section>
+
+<style>
+  .koreansk-navn {
+    left: 10px;
+    position: fixed;
+  }
+  .section-1 {
+    border-bottom: 0.5px solid black;
+    display: grid;
+    grid-template-columns: 730px 1fr 1.5fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  li:after {
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background-color: black;
+  }
+
+  li,
+  a:hover {
+    color: var(--color-primary);
+  }
+
+  a {
+    padding: 30px;
+  }
+
+  .navigation {
+    justify-content: space-around;
+    grid-column: 3 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-box {
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .presentation-text {
+    width: 500px;
+  }
+
+  @media (max-width: 1200px) {
+    .section-1 {
+      display: block;
+    }
+  }
+</style>
