@@ -1,0 +1,37 @@
+---
+import ScrollBanner from "../elements/ScrollBanner.astro";
+
+const skills = [
+  "Html, CSS & Javascript",
+  "Tailwind CSS",
+  "Next.js",
+  "Astro",
+  "Visual Studio Code",
+];
+
+const designTools = [
+  "Adobe Illustrator",
+  "Adobe Photoshop",
+  "Adobe InDesign",
+  "Adobe Premiere Pro",
+  "Figma",
+];
+---
+
+<section class="font-bold h-screen justify-between flex flex-col">
+  <ScrollBanner title="Skills" items={skills} />
+  <div class="flex flex-col justify-center flex-grow">
+    <h4 class="lg:text-9xl text-5xl md:text-8xl">Skills</h4>
+    <p class="max-w-4xl text-sm md:text-base lg:text-lg text-balance">
+      During my education, I have gained proficiency in various digital tools
+      and programs. Within graphic design, social content, and web design, I
+      have worked with software such as Adobe Photoshop, Illustrator, and
+      InDesign to create visual and creative solutions. I have also developed
+      skills in social content creation, where I have produced material for
+      digital communication. Additionally, I have experience in web development
+      and design, including HTML, CSS, and JavaScript, as well as working with
+      frameworks and tools like Astro, Next.js, and Tailwind CSS.
+    </p>
+  </div>
+  <ScrollBanner title="Design Tools" items={designTools} />
+</section>
