@@ -10,6 +10,9 @@ export default {
         primary: ['"Helvetica Neue"', "sans-serif"],
         secondary: ['"Noto Sans"', "serif"],
       },
+      fontWeight: {
+        black: 900,
+      },
       borderWidth: {
         0.5: "0.5px",
       },
@@ -21,6 +24,18 @@ export default {
       },
       animation: {
         "scroll-left": "scroll-left 5s linear infinite",
+      },
+
+      translate: {
+        20: "20px",
+      },
+      opacity: {
+        0: "0",
+        100: "1",
+      },
+
+      transitionDuration: {
+        700: "700ms",
       },
       keyframes: {
         "scroll-left": {
