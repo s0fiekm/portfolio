@@ -3,11 +3,11 @@ const { title, items } = Astro.props;
 const repeatedItems = [...items, ...items];
 ---
 
-<div class="overflow-hidden h-30 bg-tertiary py-4">
+<div class="overflow-hidden h-30 py-4">
   <div class="flex whitespace-nowrap animate-scroll-left space-x-4">
     {
       repeatedItems.map((item) => (
-        <h5 class="text-8xl inline-block text-white">{item}</h5>
+        <h5 class="text-8xl inline-block ">{item}</h5>
       ))
     }
   </div>

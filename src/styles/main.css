@@ -19,7 +19,7 @@ p {
 
 :root {
   --font-family-primary: "Poppins", serif;
-  --primary-color: #101010;
+  --primary-color: #000;
 }
 
 h1,
@@ -30,7 +30,7 @@ h5 {
   font-family: var(--font-family-primary);
   text-transform: uppercase;
   color: var(--primary-color);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 img {

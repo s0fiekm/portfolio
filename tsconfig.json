@@ -1,5 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "allowJs": true, // Tillader JavaScript-filer
+    "checkJs": false, // Undgår TypeScript-fejl i JavaScript-filer
+    "jsx": "react-jsx" // Indstil JSX for React
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }

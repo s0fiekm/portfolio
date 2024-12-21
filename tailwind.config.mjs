@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx,astro}", "./public/**/*.html"],
   theme: {
     extend: {
       backgroundImage: {
@@ -14,13 +14,13 @@ export default {
         0.5: "0.5px",
       },
       colors: {
-        primary: "#101010",
-        secondary: "#FAFAFA",
+        secondary: "#00000",
+        primary: "#FAFAFA",
         highlight: "#0400E0",
         tertiary: "#EEEEEE",
       },
       animation: {
-        "scroll-left": "scroll-left 15s linear infinite",
+        "scroll-left": "scroll-left 5s linear infinite",
       },
       keyframes: {
         "scroll-left": {
