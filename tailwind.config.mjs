@@ -24,6 +24,7 @@ export default {
       },
       animation: {
         "scroll-left": "scroll-left 6s linear infinite",
+        "scroll-left-slow": "scroll-left 20s linear infinite",
       },
 
       translate: {

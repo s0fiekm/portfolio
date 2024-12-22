@@ -4,7 +4,9 @@ const repeatedItems = [...items, ...items];
 ---
 
 <div class="overflow-hidden h-30">
-  <div class="flex whitespace-nowrap animate-scroll-left space-x-4">
+  <div
+    class="flex whitespace-nowrap animate-scroll-left-slow lg:animate-scroll-left space-x-4"
+  >
     {
       repeatedItems.map((item) => (
         <h5 class="text-8xl inline-block font-medium text-primary py-4">
