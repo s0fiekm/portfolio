@@ -23,7 +23,7 @@ export default {
         tertiary: "#EEEEEE",
       },
       animation: {
-        "scroll-left": "scroll-left 5s linear infinite",
+        "scroll-left": "scroll-left 6s linear infinite",
       },
 
       translate: {
