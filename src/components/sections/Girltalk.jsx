@@ -25,22 +25,28 @@ const Girltalk = () => {
   ];
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3">
-      <div className="bg-girltalkBlue py-20 lg:col-span-3 pl-6">
-        <h2 className="lg:text-8xl font-black text-primary">Girltalk</h2>
+    <section>
+      <div className="grid lg:grid-cols-2 ">
+        <div className="bg-girltalkBlue py-20  pl-6 grid items-center ">
+          <h2 className="lg:text-8xl text-5xl font-black text-primary">
+            Girltalk
+          </h2>
+        </div>
+        <video src="/video/girltalk.mp4" controls autoPlay muted loop></video>
       </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3">
+        <article className="bg-girltalkPeach grid items-center justify-center   py-6">
+          <AnimatedIphone delay={0} items={peachItems} />
+        </article>
 
-      <article className="bg-girltalkPeach grid items-center justify-center   py-6">
-        <AnimatedIphone delay={0} items={peachItems} />
-      </article>
+        <article className="bg-girltalkLightBlue grid justify-center items-center ">
+          <AnimatedIphone delay={0.5} items={lightBlueItems} />
+        </article>
 
-      <article className="bg-girltalkLightBlue grid justify-center items-center ">
-        <AnimatedIphone delay={0.5} items={lightBlueItems} />
-      </article>
-
-      <article className="bg-girltalkPink grid items-center justify-center  py-6">
-        <AnimatedIphone delay={1} items={pinkItems} />
-      </article>
+        <article className="bg-girltalkPink grid items-center justify-center  py-6">
+          <AnimatedIphone delay={1} items={pinkItems} />
+        </article>
+      </div>
     </section>
   );
 };
