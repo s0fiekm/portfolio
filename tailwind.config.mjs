@@ -27,24 +27,8 @@ export default {
         girltalkPink: "#F7C7D9",
         giriltalkRed: "#FC4E5C",
       },
-      animation: {
-        "scroll-left": "scroll-left 6s linear infinite",
-        "scroll-left-slow": "scroll-left 20s linear infinite",
-      },
 
-      translate: {
-        20: "20px",
-      },
-
-      transitionDuration: {
-        700: "700ms",
-      },
-      keyframes: {
-        "scroll-left": {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
+      keyframes: {},
     },
   },
   plugins: [],
