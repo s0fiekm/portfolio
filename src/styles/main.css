@@ -44,8 +44,26 @@ li a {
   background-size: cover;
 }
 
-.centered {
+.whitespace-nowrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200%;
+}
+
+.iphone {
+  position: relative;
+  width: 310px;
+  height: 640px;
+  background: url("/img/iphone.png") no-repeat center/cover;
+  overflow: hidden;
+}
+
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+  background: url("/img/floral.png") no-repeat center/cover;
 }

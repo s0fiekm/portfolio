@@ -1,10 +1,12 @@
 ---
 import Skills from "../components/sections/Skills.astro";
 import Layout from "../layouts/Layout.astro";
-import Clf from "../components/sections/Clf.jsx";
+import Girltalk from "../components/sections/Girltalk";
+import Clf from "../components/sections/Clf";
 ---
 
 <Layout>
-  <Skills />
-  <Clf client:load />
+  <section>
+    <Girltalk client:load />
+  </section>
 </Layout>
