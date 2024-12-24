@@ -19,7 +19,7 @@ const designTools = [
 ---
 
 <section
-  class="lg:h-screen gap-9 lg:gap-0 justify-between grid md:grid-col-1 lg:grid-cols-2"
+  class="lg:h-screen gap-9 lg:gap-0 lg:justify-between lg:grid block lg:grid-cols-2"
 >
   <div class="flex flex-col justify-center flex-grow ml-6">
     <h4 class="font-black lg:text-9xl text-5xl md:text-8xl">Skills</h4>
@@ -35,12 +35,18 @@ const designTools = [
     </p>
   </div>
   <div class="bg-[#0E2EEE] h-60 lg:h-full">
-    <div class="hidden lg:block">
+    <div>
       <ScrollBanner title="Skills" items={skills} direction="right" />
       <ScrollBanner title="Design Tools" items={designTools} direction="left" />
-      <ScrollBanner title="Skills" items={skills} direction="right" />
-      <ScrollBanner title="Design Tools" items={designTools} direction="left" />
-      <ScrollBanner title="Skills" items={skills} direction="right" />
+      <div class="hidden lg:block">
+        <ScrollBanner title="Skills" items={skills} direction="right" />
+        <ScrollBanner
+          title="Design Tools"
+          items={designTools}
+          direction="left"
+        />
+        <ScrollBanner title="Skills" items={skills} direction="right" />
+      </div>
     </div>
   </div>
 </section>

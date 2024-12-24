@@ -65,25 +65,5 @@ li a {
   width: 100%;
   justify-content: space-around;
   overflow: hidden;
-  background: url("/img/floral.png") no-repeat center/cover;
-}
-
-.parallax {
-  overflow: hidden;
-  letter-spacing: -2px;
-  line-height: 0.8;
-  margin: 0;
-  white-space: nowrap; /* Sørg for, at teksten ikke bryder linje */
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.scroller {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 64px;
-  display: flex;
-  white-space: nowrap; /* Sørg for, at teksten ikke bryder linje */
-  flex-wrap: nowrap;
-  gap: 2rem; /* Justér gap mellem elementer */
+  background: url("/img/floral.png") no-repeat cover;
 }

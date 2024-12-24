@@ -9,7 +9,13 @@ const repeatedItems = [...items, ...items];
   >
     {
       repeatedItems.map((item) => (
-        <h5 class="text-8xl inline-block font-medium text-primary py-4">
+        <h5
+          class="text-transparent  leading-none tracking-tight uppercase
+          text-4xl lg:text-9xl inline-block font-medium text-primary py-4 "
+          style={{
+            WebkitTextStroke: "1px white",
+          }}
+        >
           {item}
         </h5>
       ))
