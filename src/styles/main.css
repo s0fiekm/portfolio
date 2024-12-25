@@ -14,8 +14,9 @@ p {
 }
 
 :root {
-  --font-family-primary: "Poppins", serif;
+  --font-family-primary: "Bebas Neue", serif;
   --primary-color: #000;
+  --secondary-color: #fafafa;
 }
 
 h1,
@@ -25,8 +26,12 @@ h4,
 h5 {
   font-family: var(--font-family-primary);
   text-transform: uppercase;
-  color: var(--primary-color);
-  font-weight: 800;
+  color: transparent;
+  font-weight: 700;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px #0e2eee;
 }
 
 img {
@@ -44,8 +49,26 @@ li a {
   background-size: cover;
 }
 
-.centered {
+.whitespace-nowrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200%;
+}
+
+.iphone {
+  position: relative;
+  width: 310px;
+  height: 640px;
+  background: url("/img/iphone.png") no-repeat center/cover;
+  overflow: hidden;
+}
+
+.content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+  background: url("/img/floral.png") no-repeat cover;
 }
