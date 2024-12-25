@@ -7,7 +7,6 @@ export default {
         circle: "url('/img/circle.svg')",
       },
       fontFamily: {
-        primary: ['"Helvetica Neue"', "sans-serif"],
         secondary: ['"Noto Sans"', "serif"],
       },
       fontWeight: {
@@ -20,6 +19,7 @@ export default {
         secondary: "#00000",
         primary: "#FAFAFA",
         highlight: "#0400E0",
+        customBlue: "#0E2EEE",
         tertiary: "#EEEEEE",
         girltalkBlue: "#273AAA",
         girltalkPeach: "#FFF5EB",

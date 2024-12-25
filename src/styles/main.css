@@ -14,8 +14,9 @@ p {
 }
 
 :root {
-  --font-family-primary: "Poppins", serif;
+  --font-family-primary: "Bebas Neue", serif;
   --primary-color: #000;
+  --secondary-color: #fafafa;
 }
 
 h1,
@@ -25,8 +26,12 @@ h4,
 h5 {
   font-family: var(--font-family-primary);
   text-transform: uppercase;
-  color: var(--primary-color);
-  font-weight: 800;
+  color: transparent;
+  font-weight: 700;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px #0e2eee;
 }
 
 img {

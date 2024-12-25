@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const AnimatedIphone = ({ items, delay = 0 }) => {
-  // Animation for iPhone-containeren (baggrundsbilledet)
+  // Animation for iPhone-containeren
   const iphoneVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
