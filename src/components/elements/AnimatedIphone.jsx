@@ -1,36 +1,23 @@
 import { motion } from "framer-motion";
-import React from "react";
 
-const AnimatedIphone = ({ items, delay = 0 }) => {
-  // Animation for iPhone-containeren
+const AnimatedIphone = ({ children, delay = 0 }) => {
+  // Animation for iPhone-containeren (baggrundsbilledet)
   const iphoneVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay },
+      transition: { duration: 0.8, ease: "easeOut", delay }, // Bruger forsinkelse
     },
   };
 
-  // Animation for listen (indholdet)
-  const listVariants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: delay + 0.8,
-      },
-    },
-  };
-
-  // Animation for hvert element
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: 50 },
+  // Animation for skærmen (indholdet)
+  const screenVariants = {
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
-      scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.5, ease: "easeOut", delay: delay + 0.8 }, // Skærmen efter containeren
     },
   };
 
@@ -42,19 +29,15 @@ const AnimatedIphone = ({ items, delay = 0 }) => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <motion.ul
-        className="content flex flex-col gap-4"
-        variants={listVariants}
+      <motion.div
+        className="screen"
+        variants={screenVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {items.map((item, index) => (
-          <motion.li key={index} variants={itemVariants}>
-            {item}
-          </motion.li>
-        ))}
-      </motion.ul>
+        {children}
+      </motion.div>
     </motion.div>
   );
 };
