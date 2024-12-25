@@ -21,11 +21,7 @@ export default {
         highlight: "#0400E0",
         customBlue: "#0E2EEE",
         tertiary: "#EEEEEE",
-        girltalkBlue: "#273AAA",
-        girltalkPeach: "#FFF5EB",
-        girltalkLightBlue: "#D1ECEF",
-        girltalkPink: "#F7C7D9",
-        giriltalkRed: "#FC4E5C",
+        girltalk: "#E7E5E3",
       },
       animation: {
         "scroll-left": "scroll-left 6s linear infinite",
