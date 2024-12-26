@@ -1,23 +1,23 @@
+import React from "react";
 import { motion } from "framer-motion";
 
-const AnimatedIphone = ({ children, delay = 0 }) => {
-  // Animation for iPhone-containeren (baggrundsbilledet)
+const AnimatedIphone = ({ items, delay = 0 }) => {
   const iphoneVariants = {
     hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut", delay }, // Bruger forsinkelse
+      transition: { duration: 0.8, ease: "easeOut", delay },
     },
   };
 
-  // Animation for skærmen (indholdet)
   const screenVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
+      scale: 1,
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut", delay: delay + 0.8 }, // Skærmen efter containeren
+      transition: { duration: 0.5, ease: "easeOut", delay: delay + 0.8 },
     },
   };
 
@@ -30,13 +30,16 @@ const AnimatedIphone = ({ children, delay = 0 }) => {
       viewport={{ once: true }}
     >
       <motion.div
-        className="screen"
+        className="screen p-6 "
         variants={screenVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {children}
+        {/* Render items her */}
+        {items.map((item, index) => (
+          <div key={index}>{item}</div>
+        ))}
       </motion.div>
     </motion.div>
   );

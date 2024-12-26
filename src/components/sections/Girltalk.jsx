@@ -9,10 +9,10 @@ const Girltalk = () => {
   ];
 
   const secondSection = [
-    <q className="text-girltalkBlue">
+    <q className="text-[#273AA9]">
       Selvom jeg har venner, føler jeg mig tit ensom.
     </q>,
-    <q className="text-girltalkBlue">
+    <q className="text-[#273AA9]">
       Jeg har fået diagnosen autisme, så jeg føler anderledes end de andre
     </q>,
   ];
@@ -34,11 +34,11 @@ const Girltalk = () => {
         <AnimatedIphone delay={0} items={firstSection} />
       </article>
 
-      <article className="bg-girltalk lg:col-start-1 grid justify-center items-center ">
+      <article className="bg-girltalk lg:col-start-1 grid justify-center items-center p-6">
         <AnimatedIphone delay={0.5} items={secondSection} />
       </article>
 
-      <article className="bg-girltalkPink grid items-center justify-center bg-girltalk lg:col-start-1  py-6">
+      <article className="bg-girltalkPink grid items-center justify-center bg-girltalk lg:col-start-2 lg:row-start-3  py-6">
         <AnimatedIphone delay={1} items={thirdSection} />
       </article>
       <video
