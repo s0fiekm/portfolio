@@ -15,7 +15,7 @@ function Clf() {
       <div className="lg:col-start-3 lg:row-start-2">
         <img src="/img/clf2.avif" alt="Copenhagen Light Festival on computer" />
       </div>
-      <div className="lg:col-start-3 lg:row-start-3">
+      <div className="lg:col-start-1 lg:row-start-3">
         <img src="/img/clf3.avif" alt="Copenhagen Light Festival on computer" />
       </div>
       <div className="lg:col-start-2 lg:row-start-3 bg-[#bed0da] flex justify-center p-20">
