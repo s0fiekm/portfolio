@@ -26,11 +26,11 @@ const Girltalk = () => {
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3 gap-2">
-      <div className="text-3xl lg:col-start-1 lg:row-start-1">
+      <div className="text-3xl lg:col-start-1 lg:row-start-1 place-content-center">
         <h2 className="font-black ">Girltalk</h2>
       </div>
 
-      <article className="bg-girltalk flex justify-center items-center lg:col-start-2 col-span-2 lg:row-start-1 ">
+      <article className="bg-girltalk flex justify-center items-center lg:col-start-2 lg:col-span-2 lg:row-start-1 ">
         <AnimatedIphone delay={0} items={firstSection} />
       </article>
 
@@ -42,7 +42,7 @@ const Girltalk = () => {
         <AnimatedIphone delay={1} items={thirdSection} />
       </article>
       <video
-        className="lg:col-start-1 lg:col-span-3"
+        className="lg:col-start-1 lg:col-span-2 "
         src="/video/girltalk.mp4"
         controls
         autoPlay
