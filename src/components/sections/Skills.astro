@@ -1,29 +1,13 @@
 ---
-import ScrollBanner from "../elements/ScrollBanner.astro";
 
-const skills = [
-  "Html, CSS & Javascript",
-  "Tailwind CSS",
-  "Next.js",
-  "Astro",
-  "Visual Studio Code",
-];
-
-const designTools = [
-  "Adobe Illustrator",
-  "Adobe Photoshop",
-  "Adobe InDesign",
-  "Adobe Premiere Pro",
-  "Figma",
-];
 ---
 
 <section
-  class="lg:h-screen gap-9 lg:gap-0 lg:justify-between lg:grid block lg:grid-cols-2"
+  class="lg:min-h-screen grid-cols-1 grid lg:grid-cols-3 px-2 lg:auto-rows-1fr"
 >
-  <div class="flex flex-col justify-center flex-grow ml-6">
-    <h4 class="font-black lg:text-9xl text-5xl md:text-8xl">Skills</h4>
-    <p class="max-w-4xl text-sm md:text-base lg:text-lg text-balance">
+  <div class="flex flex-col lg:col-start-1 lg:row-start-2">
+    <h4 class="font-black text-3xl">Skills</h4>
+    <p class="max-w-4xl text-base text-balance">
       During my education, I have gained proficiency in various digital tools
       and programs. Within graphic design, social content, and web design, I
       have worked with software such as Adobe Photoshop, Illustrator, and
@@ -34,19 +18,21 @@ const designTools = [
       frameworks and tools like Astro, Next.js, and Tailwind CSS.
     </p>
   </div>
-  <div class="bg-[#0E2EEE] h-60 lg:h-full">
-    <div>
-      <ScrollBanner title="Skills" items={skills} direction="right" />
-      <ScrollBanner title="Design Tools" items={designTools} direction="left" />
-      <div class="hidden lg:block">
-        <ScrollBanner title="Skills" items={skills} direction="right" />
-        <ScrollBanner
-          title="Design Tools"
-          items={designTools}
-          direction="left"
-        />
-        <ScrollBanner title="Skills" items={skills} direction="right" />
-      </div>
-    </div>
+  <div class="lg:col-start-2 font-secondary place-items-center">
+    <ul class="text-primary text-left">
+      <li>Html, CSS & JavaScript</li>
+      <li>Next.js</li>
+      <li>Astro</li>
+      <li>Tailwind CSS</li>
+      <li>Github</li>
+      <li></li>
+    </ul>
   </div>
+  <ul class="text-primary font-secondary lg:row-start-3 lg:col-start-3">
+    <li>Adobe Illustrator</li>
+    <li>Figma</li>
+    <li>Adobe Premiere Pro</li>
+    <li>Adobe InDesign</li>
+    <li>Adobe Photoshop</li>
+  </ul>
 </section>
