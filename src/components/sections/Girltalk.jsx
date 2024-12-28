@@ -29,7 +29,7 @@ const Girltalk = () => {
         <h2 className="font-black ">Girltalk</h2>
       </div>
 
-      <article className="bg-girltalk flex justify-center items-center lg:col-start-2 lg:col-span-2 lg:row-start-1 ">
+      <article className="bg-girltalk flex justify-center items-center lg:col-start-2 p-6 lg:col-span-2 lg:row-start-1 ">
         <AnimatedIphone delay={0} items={firstSection} />
       </article>
 
