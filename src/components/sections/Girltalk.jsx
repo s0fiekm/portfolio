@@ -2,7 +2,6 @@ import React from "react";
 import AnimatedIphone from "../elements/AnimatedIphone.jsx";
 
 const Girltalk = () => {
-  // Definer indhold til hver iPhone
   const firstSection = [
     <img src="/img/drink.svg" alt="Drink no thanks" />,
     <img src="/img/message.svg" alt="Digital message with text" />,
@@ -25,7 +24,7 @@ const Girltalk = () => {
   ];
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+    <section className="grid grid-cols-1 lg:grid-cols-3 gap-2 min-h-screen">
       <div className="text-3xl lg:col-start-1 lg:row-start-1 place-content-center">
         <h2 className="font-black ">Girltalk</h2>
       </div>

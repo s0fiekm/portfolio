@@ -71,3 +71,44 @@ li a {
 body {
   background-color: var(--secondary-color);
 }
+
+.animate-on-scroll {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.screen-wrapper {
+  position: absolute;
+  top: 16.2%;
+  right: 17.7%;
+  width: 65%;
+  height: 54.5%;
+  overflow: hidden;
+  transform: scaleX(1.01);
+  transform-origin: bottom;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.scrolling-screenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  animation: scroll 11s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

@@ -9,8 +9,33 @@ import PersonalProjects from "../components/sections/PersonalProjects.astro";
 
 <Layout>
   <Skills />
+  <section class="min-h-screen">
+    <h2 class="text-3xl font-black">School projects</h2>
+  </section>
   <Clf />
   <Girltalk client:load />
   <PersonalProjects />
   <Contact />
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const animateOnScrollElements =
+      document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    animateOnScrollElements.forEach((element) => observer.observe(element));
+  });
+</script>
