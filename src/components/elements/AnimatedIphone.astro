@@ -1,0 +1,40 @@
+---
+export interface AnimatedIphoneProps {
+  items?: Array<{
+    id: string;
+    type: string;
+    src?: string;
+    alt?: string;
+    text?: string;
+    class?: string;
+  }>;
+  delay?: number;
+}
+
+// Default props
+const { items = [], delay = 0 }: AnimatedIphoneProps = Astro.props;
+---
+
+<div class="iphone animate-on-scroll">
+  <div class="screen p-6">
+    {
+      items.length > 0 ? (
+        items.map((item, index) => (
+          <div class="fade-in" style={`animation-delay: ${index * delay}s`}>
+            {item.type === "image" && item.src && item.alt ? (
+              <img src={item.src} alt={item.alt} />
+            ) : null}
+            {item.type === "quote" && item.text ? (
+              <q class={item.class}>{item.text}</q>
+            ) : null}
+            {item.type === "text" && item.text ? (
+              <h3 class={item.class}>{item.text}</h3>
+            ) : null}
+          </div>
+        ))
+      ) : (
+        <p>No items to display.</p>
+      )
+    }
+  </div>
+</div>
