@@ -3,15 +3,20 @@ import Home from "../components/sections/Home.astro";
 import Skills from "../components/sections/Skills.astro";
 import Contact from "../components/sections/Contact.astro";
 import Layout from "../layouts/Layout.astro";
-import Girltalk from "../components/sections/Girltalk";
+import Girltalk from "../components/sections/Girltalk.astro";
 import Clf from "../components/sections/Clf.astro";
 import PersonalProjects from "../components/sections/PersonalProjects.astro";
+import Navigation from "../components/elements/Navigation.astro";
 ---
 
 <Layout>
+  <header>
+    <Navigation />
+  </header>
   <Home />
   <Skills />
   <section
+    id="schoolprojects"
     class="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 items-center"
   >
     <div class="lg:col-start-2">
