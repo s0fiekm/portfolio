@@ -37,12 +37,6 @@ img {
   width: 100%;
 }
 
-li a {
-  text-decoration: none;
-  font-family: var(--font-family-primary);
-  text-transform: uppercase;
-}
-
 .section {
   height: 100vh;
   background-size: cover;
@@ -126,4 +120,32 @@ body {
   100% {
     transform: translateY(-50%);
   }
+}
+nav ul li {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.nav-item a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: inherit;
+}
+
+.nav-item a::after {
+  width: 100%;
+  content: attr(data-number); /* Standardindhold: tal */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: yellow;
+  color: black;
+}
+
+.nav-bar.home-visible .nav-item a::after {
+  content: attr(data-text);
+}
+
+.nav-item a:hover::after {
+  content: attr(data-text);
 }

@@ -13,8 +13,8 @@ import Navigation from "../components/elements/Navigation.astro";
   <header>
     <Navigation />
   </header>
-  <Home />
-  <Skills />
+  <Home id="home" />
+  <Skills id="skills" />
   <section
     id="schoolprojects"
     class="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 items-center"
@@ -29,9 +29,9 @@ import Navigation from "../components/elements/Navigation.astro";
     </div>
   </section>
   <Clf />
-  <Girltalk client:load />
-  <PersonalProjects />
-  <Contact />
+  <Girltalk id="girltalk" />
+  <PersonalProjects id="personalprojects" />
+  <Contact id="contact" />
 </Layout>
 
 <script>
