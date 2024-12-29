@@ -1,44 +1,27 @@
 <nav class="fixed z-50 nav-bar">
   <ul class="font-secondary md:text-4xl font-bold text-base">
-    <li class="nav-item" data-text="Home" data-number="1">
+    <li class="nav-item" data-number="1">
       <a href="#home">Home</a>
     </li>
-    <li class="nav-item" data-text="Skills" data-number="2">
+    <li class="nav-item" data-number="2">
       <a href="#skills">Skills</a>
     </li>
-    <li class="nav-item" data-text="School Projects" data-number="3">
+    <li class="nav-item" data-number="3">
       <a href="#schoolprojects">School Projects</a>
     </li>
-    <li class="nav-item" data-text="Copenhagen Light Festival" data-number="4">
+    <li class="nav-item" data-number="4">
       <a href="#clf">Copenhagen Light Festival</a>
     </li>
-    <li class="nav-item" data-text="Girltalk" data-number="5">
+    <li class="nav-item" data-number="5">
       <a href="#girltalk">Girltalk</a>
     </li>
-    <li class="nav-item" data-text="Personal Projects" data-number="6">
+    <li class="nav-item" data-number="6">
       <a href="#personalprojects">Personal Projects</a>
     </li>
-    <li class="nav-item" data-text="Contact" data-number="7">
+    <li class="nav-item" data-number="7">
       <a href="#contact">Contact</a>
     </li>
   </ul>
 </nav>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navBar = document.querySelector(".nav-bar");
-    const homeSection = document.getElementById("home");
-
-    window.addEventListener("scroll", () => {
-      if (navBar && homeSection) {
-        const homeVisible = window.scrollY < homeSection.offsetHeight;
-
-        if (homeVisible) {
-          navBar.classList.add("home-visible");
-        } else {
-          navBar.classList.remove("home-visible");
-        }
-      }
-    });
-  });
-</script>
+<script></script>

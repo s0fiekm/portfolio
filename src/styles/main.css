@@ -92,35 +92,6 @@ body {
   transform: translateY(0);
 }
 
-.screen-wrapper {
-  position: absolute;
-  top: 16.2%;
-  right: 17.7%;
-  width: 65%;
-  height: 54.5%;
-  overflow: hidden;
-  transform: scaleX(1.01);
-  transform-origin: bottom;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.scrolling-screenshot {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  animation: scroll 11s linear infinite;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
 nav ul li {
   position: relative;
   transition: transform 0.3s ease-in-out;
@@ -130,22 +101,4 @@ nav ul li {
   text-decoration: none;
   color: black;
   font-size: inherit;
-}
-
-.nav-item a::after {
-  width: 100%;
-  content: attr(data-number); /* Standardindhold: tal */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: yellow;
-  color: black;
-}
-
-.nav-bar.home-visible .nav-item a::after {
-  content: attr(data-text);
-}
-
-.nav-item a:hover::after {
-  content: attr(data-text);
 }

@@ -26,6 +26,7 @@ export default {
       animation: {
         "scroll-left": "scroll-left 6s linear infinite",
         "scroll-left-slow": "scroll-left 20s linear infinite",
+        scroll: "scroll 11s linear infinite",
       },
 
       translate: {
@@ -39,6 +40,10 @@ export default {
         "scroll-left": {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        scroll: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-50%)" },
         },
       },
     },
