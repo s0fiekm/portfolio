@@ -3,6 +3,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,ts,tsx}", "./public/**/*.html"],
   theme: {
     extend: {
+      screens: {
+        xs: "320px",
+        mdsm: "700px",
+        lgsm: "880px",
+      },
       backgroundImage: {
         circle: "url('/img/circle.svg')",
       },

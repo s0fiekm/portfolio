@@ -1,39 +1,19 @@
-<nav class="fixed z-50 nav-bar">
-  <ul class="font-secondary md:text-4xl font-bold text-base">
-    <li class="nav-item">
-      <a href="#home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="#skills">Skills</a>
-    </li>
-    <li class="nav-item">
-      <a href="#schoolprojects">School Projects</a>
-    </li>
-    <li class="nav-item">
-      <a href="#clf">Copenhagen Light Festival</a>
-    </li>
-    <li class="nav-item">
-      <a href="#girltalk">Girltalk</a>
-    </li>
-    <li class="nav-item">
-      <a href="#personalprojects">Personal Projects</a>
-    </li>
-    <li class="nav-item">
-      <a href="#contact">Contact</a>
-    </li>
-  </ul>
-</nav>
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section, [id]");
-    const navItems = document.querySelectorAll(".nav-item a");
-
+    const navBar = document.querySelector(".nav-bar");
+    const lgBreakpoint = 1024;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            updateNav(entry.target.id);
+          if (window.innerWidth >= lgBreakpoint) {
+            if (entry.target.id === "home" && entry.isIntersecting) {
+              navBar?.classList.add("show-text");
+            } else if (entry.isIntersecting) {
+              navBar?.classList.remove("show-text");
+            }
+          } else {
+            navBar?.classList.remove("show-text");
           }
         });
       },
@@ -41,25 +21,128 @@
         threshold: 0.5,
       }
     );
-
     sections.forEach((section) => observer.observe(section));
-    function updateNav(visibleSectionId: string) {
-      const isSkillsOrBelow = [
-        "skills",
-        "schoolprojects",
-        "clf",
-        "girltalk",
-        "personalprojects",
-        "contact",
-      ].includes(visibleSectionId);
-      navItems.forEach((item, index) => {
-        if (isSkillsOrBelow) {
-          item.textContent = (index + 1).toString();
-        } else {
-          const href = item.getAttribute("href");
-          item.textContent = href ? href.replace("#", "") : "";
-        }
-      });
-    }
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < lgBreakpoint) {
+        navBar?.classList.remove("show-text");
+      }
+    });
   });
 </script>
+
+<nav
+  class="fixed z-50 nav-bar backdrop-blur-md top-0 lg:bg-transparenttext-black lg:backdrop-blur-0 w-screen"
+>
+  <ul class="font-secondary text-lg lg:text-4xl font-bold flex flex-col">
+    <li class="nav-item group">
+      <a href="#home" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">1</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Home</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group">
+      <a href="#skills" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">2</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Skills</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group">
+      <a href="#schoolprojects" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">3</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >School Projects</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group lg:ml-3">
+      <a href="#clf" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">3.1</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Copenhagen Light Festival</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group lg:ml-3">
+      <a href="#girltalk" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">3.2</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Girltalk</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group">
+      <a href="#personalprojects" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">4</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Personal projects</span
+        >
+      </a>
+    </li>
+    <li class="nav-item group">
+      <a href="#contact" class="relative">
+        <span class="opacity-100 lg:group-hover:opacity-100">5</span>
+        <span class="opacity-0 lg:group-hover:opacity-100 transition-opacity"
+          >Contact</span
+        >
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .nav-item a {
+    text-decoration: none;
+  }
+  .nav-item a span {
+    display: inline-block;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  @media (min-width: 1024px) {
+    .show-text .nav-item a span:first-child {
+      display: none;
+    }
+
+    .show-text .nav-item a span:last-child {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+  @media (min-width: 1024px) {
+    .show-text .nav-item a:hover span:not(.hidden) {
+      transform: translateX(4px);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .nav-item a span:first-child {
+      display: none;
+    }
+    .nav-item a span:last-child {
+      opacity: 1;
+    }
+  }
+
+  .opacity-0 {
+    opacity: 0;
+  }
+  .opacity-100 {
+    opacity: 1;
+  }
+  .transition-opacity {
+    transition: opacity 0.3s ease;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
