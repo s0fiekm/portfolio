@@ -1,27 +1,65 @@
 <nav class="fixed z-50 nav-bar">
   <ul class="font-secondary md:text-4xl font-bold text-base">
-    <li class="nav-item" data-number="1">
+    <li class="nav-item">
       <a href="#home">Home</a>
     </li>
-    <li class="nav-item" data-number="2">
+    <li class="nav-item">
       <a href="#skills">Skills</a>
     </li>
-    <li class="nav-item" data-number="3">
+    <li class="nav-item">
       <a href="#schoolprojects">School Projects</a>
     </li>
-    <li class="nav-item" data-number="4">
+    <li class="nav-item">
       <a href="#clf">Copenhagen Light Festival</a>
     </li>
-    <li class="nav-item" data-number="5">
+    <li class="nav-item">
       <a href="#girltalk">Girltalk</a>
     </li>
-    <li class="nav-item" data-number="6">
+    <li class="nav-item">
       <a href="#personalprojects">Personal Projects</a>
     </li>
-    <li class="nav-item" data-number="7">
+    <li class="nav-item">
       <a href="#contact">Contact</a>
     </li>
   </ul>
 </nav>
 
-<script></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section, [id]");
+    const navItems = document.querySelectorAll(".nav-item a");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            updateNav(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    function updateNav(visibleSectionId: string) {
+      const isSkillsOrBelow = [
+        "skills",
+        "schoolprojects",
+        "clf",
+        "girltalk",
+        "personalprojects",
+        "contact",
+      ].includes(visibleSectionId);
+      navItems.forEach((item, index) => {
+        if (isSkillsOrBelow) {
+          item.textContent = (index + 1).toString();
+        } else {
+          const href = item.getAttribute("href");
+          item.textContent = href ? href.replace("#", "") : "";
+        }
+      });
+    }
+  });
+</script>
