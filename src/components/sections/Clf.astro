@@ -9,52 +9,79 @@
   </div>
 
   <img
-    class="lg:col-start-3 animate-on-scroll lg:row-start-1 animate-on-scroll"
+    class="lg:col-start-3 animate-on-scroll lg:row-start-1"
     src="/img/clf1.avif"
     alt="Copenhagen Light Festival on computer"
   />
 
   <img
-    class="lg:col-start-2 animate-on-scroll lg:row-start-3 animate-on-scroll"
+    class="lg:col-start-2 animate-on-scroll lg:row-start-3"
     src="/img/clf2.avif"
     alt="Copenhagen Light Festival on computer"
   />
 
   <img
-    class="animate-on-scroll lg:col-start-1 lg:row-start-6 animate-on-scroll"
+    class="lg:col-start-1 lg:row-start-6 animate-on-scroll"
     src="/img/clf3.avif"
     alt="Copenhagen Light Festival on computer"
   />
   <div
-    class="animate-on-scroll relative lg:col-start-2 lg:col-span-2 w-full mx-auto lg:row-span-2 lg:row-start-4 bg-[#bed0da] flex justify-center p-20 animate-on-scroll"
+    class="relative lg:col-start-2 lg:col-span-2 w-full mx-auto lg:row-span-2 lg:row-start-4 flex justify-center"
   >
-    <img
-      class="macbook-image w-full h-auto"
-      src="/img/clf4.png"
-      alt="MacBook Mockup"
-    />
-    <div
-      class="absolute overflow-hidden
-      w-[52%] h-[40%] left-[24%] top-[25%]
-      xs:w-[58%] xs:h-[48%] xs:left-[21%] xs:top-[20%]
-      sm:w-[61%] sm:h-[51%] sm:left-[19.5%] sm:top-[18%]
-      mdsm:w-[63%] mdsm:h-[52%] mdsm:top-[17.8%] mdsm:left-[18.5%]
-      md:w-[64.3%] md:h-[55%] md:top-[16%] md:left-[17.7%]
-      lgsm:w-[67%] lgsm:h-[57%] lgsm:top-[15%] lgsm:left-[16.5%]
-      lg:w-[62.5%] lg:h-[52%] lg:top-[18%] lg:left-[18.5%]
-      xl:w-[66.7%] xl:h-[57%] xl:top-[15%] xl:left-[16.8%]
-      2xl:w-[70%] 2xl:h-[61%] 2xl:top-[12%] 2xl:left-[14.9%]"
-    >
-      <img
-        class="absolute w-full h-auto object-cover animate-scroll"
-        src="/img/clfprototype.avif"
-        alt="Scrolling Screenshot"
-      />
-      <img
-        class="absolute w-full h-auto object-cover animate-scroll"
-        src="/img/clfprototype.avif"
-        alt="Scrolling Screenshot"
-      />
+    <img class="macbook" src="/img/clf4.avif" alt="MacBook Mockup" />
+
+    <div class="absolute macbook-screen">
+      <div class="scrolling-content">
+        <img
+          class="w-full h-auto object-cover"
+          src="/img/clfprototype.avif"
+          alt="Scrolling Screenshot"
+        />
+        <img
+          class="w-full h-auto object-cover"
+          src="/img/clfprototype.avif"
+          alt="Scrolling Screenshot"
+        />
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .macbook {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+  }
+
+  .macbook-screen {
+    position: absolute;
+    top: 12.5%;
+    left: 22%;
+    width: 56%;
+    border-radius: 8px;
+    height: auto;
+    aspect-ratio: 780 / 488;
+    overflow: hidden;
+  }
+
+  .scrolling-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: scroll-animation 5s linear infinite;
+  }
+
+  @keyframes scroll-animation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+</style>
